@@ -1,5 +1,6 @@
 {
   "name": "bestax",
+  "version": "1.0.292",
   "description": "Build with @allxsmith/bestax-bulma, React components for Bulma v1: the bestax Agent Skills, plus the bestax-mcp server for props, examples and CSS variables",
   "author": {
     "name": "Alex Smith",
@@ -15,6 +16,7 @@
     "react",
     "agent-skills"
   ],
+  "icon": "./.claude-plugin/icon.png",
   "privacyPolicyUrl": "https://bestax.io/docs/guides/telemetry",
   "supportUrl": "https://github.com/allxsmith/bestax/issues",
   "mcpServers": {
