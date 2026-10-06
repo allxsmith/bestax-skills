@@ -1,6 +1,6 @@
 {
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bestax",
+  "displayName": "Bestax",
   "version": "1.0.294",
   "description": "Build with @allxsmith/bestax-bulma, React components for Bulma v1: the bestax Agent Skills, plus the bestax-mcp server for props, examples and CSS variables",
   "author": {
@@ -17,5 +17,7 @@
     "react",
     "agent-skills"
   ],
+  "logo": "assets/logo.png",
+  "skills": "./skills/",
   "mcpServers": "./mcp.json"
 }
