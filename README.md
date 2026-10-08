@@ -113,6 +113,7 @@ npx -y bestax-mcp@1.14.0
 The server reads these environment variables, all optional:
 
 - `BESTAX_MCP_NO_VERSION_CHECK` (boolean): Skip comparing your installed @allxsmith/bestax-bulma version with the one the index documents.
+- `BESTAX_MCP_PROJECT_DIR` (filepath): Your project directory, where the installed @allxsmith/bestax-bulma version is read from; defaults to the directory the server starts in.
 
 ## Privacy Policy
 
