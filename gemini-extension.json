@@ -1,13 +1,13 @@
 {
   "name": "bestax",
-  "version": "1.0.347",
+  "version": "1.0.348",
   "description": "Build with @allxsmith/bestax-bulma, React components for Bulma v1: the bestax Agent Skills, plus the bestax-mcp server for props, examples and CSS variables",
   "mcpServers": {
     "bestax": {
       "command": "npx",
       "args": [
         "-y",
-        "bestax-mcp@1.14.0"
+        "bestax-mcp@1.14.1"
       ]
     }
   }
