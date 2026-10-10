@@ -1,7 +1,7 @@
 {
   "name": "bestax",
   "displayName": "Bestax",
-  "version": "1.0.406",
+  "version": "1.0.411",
   "description": "Build with @allxsmith/bestax-bulma, React components for Bulma v1: the bestax Agent Skills, plus the bestax-mcp server for props, examples and CSS variables",
   "author": {
     "name": "Alex Smith",
