@@ -109,7 +109,7 @@ Your agent starts the server with this command, the same one in
 `.claude-plugin/plugin.json`, `gemini-extension.json` and `mcp.json`:
 
 ```text
-npx -y bestax-mcp@1.15.6
+npx -y bestax-mcp@1.15.7
 ```
 
 The server reads these environment variables, all optional:
