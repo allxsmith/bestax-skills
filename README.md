@@ -20,7 +20,7 @@ These Agent Skills, each of which your agent loads when a task calls for it:
 - **bestax-form**: Build forms with @allxsmith/bestax-bulma.
 - **bestax-icons**: Use icons in an app built with @allxsmith/bestax-bulma.
 - **bestax-layout-scaffold**: Scaffold a complete, responsive page layout with @allxsmith/bestax-bulma.
-- **bestax-migrate**: Migrate an existing React app to @allxsmith/bestax-bulma on Bulma v1, from raw Bulma CSS classes on plain JSX (className="button is-primary") or from an unmaintained React Bulma library (react-bulma-components v4, rbx v2, bloomer 0.6).
+- **bestax-migrate**: Migrate an existing React app to @allxsmith/bestax-bulma on Bulma v1, from raw Bulma CSS classes on plain JSX (className="button is-primary") or in static HTML pages and templates styled with Bulma, or from an unmaintained React Bulma library (react-bulma-components v4, rbx v2, bloomer 0.6).
 - **bestax-optimize**: Reduce the built CSS size of an app using @allxsmith/bestax-bulma.
 - **bestax-theming**: Customize colors, branding, dark mode, and visual tokens of an app built with @allxsmith/bestax-bulma.
 
@@ -109,7 +109,7 @@ Your agent starts the server with this command, the same one in
 `.claude-plugin/plugin.json`, `gemini-extension.json` and `mcp.json`:
 
 ```text
-npx -y bestax-mcp@1.15.9
+npx -y bestax-mcp@1.15.10
 ```
 
 The server reads these environment variables, all optional:
