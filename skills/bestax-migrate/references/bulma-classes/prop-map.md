@@ -72,7 +72,9 @@ Sizes are `1` to `12`, `full`, `half`, `one-third`, `two-thirds`, `one-quarter`,
 
 bestax picks the heading from `size` (`size="3"` renders an `<h3>`) unless `as="p"`. So on an
 `<h2>`, `is-4` stays a class and the element becomes `<Title as="h2" className="is-4">`, which
-renders the same `<h2>`.
+renders the same `<h2>`. To write it as a prop, `textSize="4"` keeps the `<h2>` and sizes it the
+same: it renders Bulma's `is-size-4`, which has the font size `is-4` gives a title or subtitle,
+and as a Bulma helper it is `!important`, so check a title the page's own CSS sizes.
 
 ### Other components
 
@@ -165,7 +167,10 @@ These convert on every component above and on the plain-tag wrappers.
 
 Colors are `primary`, `link`, `info`, `success`, `warning`, `danger`, `black`, `black-bis`,
 `black-ter`, `grey-darker`, `grey-dark`, `grey`, `grey-light`, `grey-lighter`, `white`,
-`white-bis`, `white-ter`, `light`, `dark`, `inherit` and `current`. Gap steps are `0` to `8` in
+`white-bis`, `white-ter`, `light`, `dark`, `inherit` and `current`. Shades are `00` to `95` in
+steps of five, `invert`, `light`, `dark`, `soft`, `bold` and `on-scheme`, on the colors Bulma
+shades: `primary`, `link`, `info`, `success`, `warning`, `danger`, `black`, `white`, `light` and
+`dark`. Gap steps are `0` to `8` in
 half steps (`0`, `0.5`, `1`, … `7.5`, `8`). Overflow values are `auto`, `clip`, `hidden`, `scroll`
 and `visible`. Ratios are `1by1`, `5by4`, `4by3`, `3by2`, `5by3`, `16by9`, `2by1`, `3by1`,
 `4by5`, `3by4`, `2by3`, `3by5`, `9by16`, `1by2` and `1by3`.
@@ -177,6 +182,7 @@ and `visible`. Ratios are `1by1`, `5by4`, `4by3`, `3by2`, `5by3`, `16by9`, `2by1
 | `is-marginless`, `is-paddingless` (Bulma 0.9's, which v1 removed)                                         | `m="0"`, `p="0"`, which render v1's `m-0` and `p-0`                                                                              |
 | `has-text-{color}`                                                                                        | `textColor` (on `Menu`, `Menu.Label`, `Menu.List` and `Table`, `color`)                                                          |
 | `has-background-{color}`                                                                                  | `bgColor` (on `Menu`, `Menu.Label`, `Menu.List`, `Tag`, `File`, `InputBase`, `TextAreaBase` and `SelectBase`, `backgroundColor`) |
+| `has-text-{color}-{shade}`, `has-background-{color}-{shade}`                                              | the same color prop, with `colorShade` or `backgroundColorShade` (`textColor="primary" colorShade="on-scheme"`)                  |
 | `is-size-1` … `is-size-7`, and `-{viewport}`                                                              | `textSize`, `textSize{Viewport}`                                                                                                 |
 | `has-text-centered`, `-justified`, `-left`, `-right`, and `-{viewport}`                                   | `textAlign`, `textAlign{Viewport}`                                                                                               |
 | `is-capitalized`, `is-lowercase`, `is-uppercase`, `is-italic`                                             | `textTransform`                                                                                                                  |
@@ -244,7 +250,10 @@ Some classes stay put because of how bestax renders them:
 
 ## Classes that stay classes
 
-Color shades (`has-text-primary-65`), the `-touch` and `-only` breakpoints of text size and
+A color shade one color and one shade can't write (`has-text-primary-100`, the `-invert` of a
+shade such as `has-text-primary-30-invert`, a shade of the `text` color), a shade or color for a
+prop another class already wrote (`has-text-primary-30 has-text-info-40` keeps the second), the
+palettes and `is-bold` and `is-soft`, the `-touch` and `-only` breakpoints of text size and
 alignment, Grid and `.image` modifiers away from their own element, v1's `marginless` and
 `paddingless` (the rules of `m-0` and `p-0` under other names), and the Bulma helpers bestax has
 no prop for (`is-display-*`, `is-visibility-*`, `is-float-*`, `is-clear-*`, …) stay in
