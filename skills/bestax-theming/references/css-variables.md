@@ -248,6 +248,9 @@ lone class or the `style` prop cannot outrank:
   its own declaration — target the declaring element in your CSS:
   `.tooltip-content { --bulma-tooltip-background: … }`.
 
+The `style` prop also misses on Checkbox and Radio, which put it on their hidden `<input>`; set
+their variables through `className` (see their entries below).
+
 ### Avatar / Avatars / Badge
 
 | Variable                                                          | Default                          |
@@ -303,11 +306,21 @@ own-selector override rule applies.
 `--bulma-carousel-indicator-line-height`, `--bulma-carousel-indicator-line-height-mobile`,
 `--bulma-carousel-indicator-line-radius`, `--bulma-carousel-indicator-line-width`,
 `--bulma-carousel-indicator-line-width-mobile`, `--bulma-carousel-indicator-size`,
-`--bulma-carousel-indicator-size-mobile`, `--bulma-carousel-overlay-arrow-background`,
+`--bulma-carousel-indicator-size-mobile`, `--bulma-carousel-item-gap`,
+`--bulma-carousel-items-in-view`, `--bulma-carousel-items-to-show`,
+`--bulma-carousel-items-to-show-desktop`, `--bulma-carousel-items-to-show-fullhd`,
+`--bulma-carousel-items-to-show-mobile`, `--bulma-carousel-items-to-show-tablet`,
+`--bulma-carousel-items-to-show-widescreen`, `--bulma-carousel-overlay-arrow-background`,
 `--bulma-carousel-overlay-arrow-background-hover`, `--bulma-carousel-overlay-arrow-color`,
 `--bulma-carousel-overlay-indicator-background`,
 `--bulma-carousel-overlay-indicator-background-active`,
 `--bulma-carousel-overlay-indicator-background-hover`, `--bulma-carousel-transition-duration`
+
+`--bulma-carousel-item-gap` (a length, default `0px`) is the space between items in view; set it
+on the carousel's own element through a class. The `--bulma-carousel-items-to-show*` variables
+come from the `itemsToShow*` props, and `--bulma-carousel-items-in-view` is the one of them the
+viewport picks. The props also decide how far a step moves, so set the count with the props
+rather than with these variables.
 
 ### Checkbox
 
@@ -316,6 +329,17 @@ own-selector override rule applies.
 `--bulma-checkbox-focus-shadow-size`, `--bulma-checkbox-indeterminate-color`,
 `--bulma-checkbox-label-gap`, `--bulma-checkbox-radius`, `--bulma-checkbox-size`,
 `--bulma-checkbox-transition-duration`
+
+The check mark and the mixed dash are both `--bulma-checkbox-check-color`, on the
+`--bulma-checkbox-active-color` (checked) or `--bulma-checkbox-indeterminate-color` (mixed) fill,
+so a dark fill needs a light check color. Set these on a class you pass through `className`, not
+with `style`: Checkbox puts `style` and its other attributes on the hidden `<input>`, not on the
+`.styled-checkbox` label that declares them. Name both classes in the selector
+(`.styled-checkbox.my-box`, mind the class prefix) so it wins whatever order the stylesheets load
+in. A `color` prop declares both fills again on `.styled-checkbox.is-<color>`, which ties with
+that selector, so leave `color` unset when a class sets the fill. The unchecked border, `--bulma-checkbox-border-color`, defaults to `text-weak` so
+the box holds the 3:1 WCAG asks of a control's boundary; keep a replacement at 3:1 against what
+the form sits on.
 
 ### Collapse
 
@@ -514,6 +538,12 @@ them. See the constituent-element exception above.
 `--bulma-radio-active-color`, `--bulma-radio-background`, `--bulma-radio-border-color`,
 `--bulma-radio-border-width`, `--bulma-radio-dot-color`, `--bulma-radio-focus-shadow-size`,
 `--bulma-radio-label-gap`, `--bulma-radio-size`, `--bulma-radio-transition-duration`
+
+As with Checkbox, set these on a class you pass through `className`, with both classes in the
+selector (`.styled-radio.my-radio`): `style` goes to the hidden `<input>`. A `color` prop
+declares `--bulma-radio-active-color` again on `.styled-radio.is-<color>`, which ties that
+selector, so leave `color` unset when a class sets it. The unchecked ring, `--bulma-radio-border-color`, defaults to `text-weak` for the same 3:1 boundary
+contrast.
 
 ### Rate
 
