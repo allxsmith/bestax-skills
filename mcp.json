@@ -6,7 +6,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "bestax-mcp@1.18.8"
+        "bestax-mcp@1.18.9"
       ]
     }
   }
