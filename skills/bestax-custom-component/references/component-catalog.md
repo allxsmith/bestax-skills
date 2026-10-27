@@ -37,7 +37,7 @@ instead of hand-writing markup.
 - Raw `*Base` form exports (`InputBase`, `SelectBase`, `TextAreaBase`, …) are
   escape-hatch variants of the convenience wrappers above them; see the Form docs.
 
-105 documented components. Generated from the API docs — every exported
+106 documented components. Generated from the API docs — every exported
 component is guaranteed to appear (the generator fails if one lacks an API page).
 
 ## Elements
@@ -153,6 +153,7 @@ component is guaranteed to appear (the generator fails if one lacks an API page)
 - [Level](https://bestax.io/docs/api/layout/level) — The `Level` component provides a flexible horizontal layout for your Bulma React UI, perfect for aligning items on the left and right…
 - [Media](https://bestax.io/docs/api/layout/media) — The `Media` component implements Bulma’s powerful media object layout for React.
 - [Section](https://bestax.io/docs/api/layout/section) — The `Section` component provides vertical spacing and visual separation for your Bulma React UI.
+- [Splitter](https://bestax.io/docs/api/layout/splitter) — The `Splitter` component lays out two or more panes side by side or one above the other, with a handle between each pair to drag or move by keyboard.
 
 ## Helpers
 

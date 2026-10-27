@@ -83,6 +83,8 @@ is **more complete** than the docs page's Option C example, which omits several)
 `toast`, `dialog`, `carousel`, `tabs`, `menu`, `reveal`, `avatar`, `avatars`, `badge`,
 `emptystate`, `timeline`, `treeview`, `scrollarea`
 
+**Layout** (`@allxsmith/bestax-bulma/scss/layout/<name>`): `splitter`
+
 **Form** (`@allxsmith/bestax-bulma/scss/form/<name>`):
 `checkbox`, `radio`, `switch`, `slider`, `numberinput`, `pininput`, `rate`, `autocomplete`,
 `combobox`, `taginput`, `picker-popover`, `dateinput`, `timeinput`, `datetimeinput`,
