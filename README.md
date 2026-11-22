@@ -1,5 +1,7 @@
 # bestax plugin
 
+[![AgentShield Security](https://merx.help/badge/A+.svg)](https://merx.help/shield)
+
 The `bestax` plugin helps coding agents build with
 [@allxsmith/bestax-bulma](https://bestax.io), React components for Bulma v1. It
 installs the bestax [Agent Skills](https://bestax.io/docs/skills/intro) and the
